@@ -2,17 +2,9 @@
 
 Data used in the analyses can be downloaded using:
 
-*[Download Files](examples/Download_Files.ipynb)
+*[Download Files](examples/00_Download_Files.ipynb)
 
-Data supporting this work can be found here:
-
-<a href=https://svrimg.niu.edu/climc23/mcs_days/>MCS Day Data</a>
-
-MCS Precipitation Data (working on it)
-
-MCS Attribute Data (working on it)
-
-As of November 2023, these data are preliminary and undergoing peer review. These data are meant for use by reviewers. 
+As of March 2024, these data are preliminary and undergoing peer review. These data are meant for use by reviewers. 
 
 If you use them:
 
