@@ -1,11 +1,11 @@
 import numpy as np
-from scipy.stats import mannwhitneyu
+from scipy.stats import mannwhitneyu, levene
 
 import geopandas as gpd
 import regionmask
 import numpy as np
 
-def write_sig_summary(m_data, sim_names, reg_names, analysis_name, var_name):
+def write_sig_summary(m_data, sim_names, reg_names, analysis_name, var_name, test='mann'):
 
     for sim in sim_names.keys():
 
@@ -28,8 +28,17 @@ def write_sig_summary(m_data, sim_names, reg_names, analysis_name, var_name):
                 
                 futr_mean = futr_.mean('time')
                 futr_mean = futr_mean.mean(('west_east', 'south_north'))
+
+                if test == 'mann':
     
-                _, p = mannwhitneyu(hist_years[var_name].values, futr_years[var_name].values)
+                    _, p = mannwhitneyu(hist_years[var_name].values, futr_years[var_name].values)
+
+                elif test == 'leve':
+                    
+                    _, p = levene(hist_years[var_name].values, futr_years[var_name].values)
+
+                else:
+                    raise ValueError("test not implemented:", test)
         
                 if p < 0.05:
                     ast = "*"

@@ -21,7 +21,7 @@ def download_geography(data_dir="../data", print_urls=False, create_dirs=True, v
 
     for ext in ['.cpg', '.dbf', '.prj', '.sbn', '.sbx', '.shp', '.xml', '.shx']:
 
-        url = "https://svrimg.niu.edu/npjcas23/"
+        url = "https://nimbus.niu.edu/climc23/geog/"
 
         result = get_url_paths(url, ext)
 
@@ -84,7 +84,7 @@ def download(analysis, subset, data_dir="../data", verbose=False, create_dirs=Fa
     
     for ext in ['.nc']:
 
-        url = f"https://svrimg.niu.edu/climc23/{analysis}/{subset}/"
+        url = f"https://nimbus.niu.edu/climc23/{analysis}/{subset}/"
 
         result = get_url_paths(url, ext)
 

@@ -19,7 +19,7 @@ longitutde_display = {'ECONUS': [-110, -100, -90, -80, -70]}
 
 def get_color_dict(figure):
 
-    if figure in [1]:
+    if figure == 1:
 
         raw_values = [1, 5, 10, 20, 30, 40, 50]
         diff_values = [-15, -10, -5, -1, 1, 5, 10, 15]
@@ -33,7 +33,7 @@ def get_color_dict(figure):
         raw_under = 'grey'
         diff_under = '#8c510a'
 
-    if figure in [2]:
+    elif figure == 2:
 
         raw_values = [1, 2, 3, 5, 10, 15, 20]
         diff_values = [-7, -5, -3, -1, 1, 3, 5, 7]
@@ -46,6 +46,93 @@ def get_color_dict(figure):
         
         raw_under = 'grey'
         diff_under = '#8c510a'
+
+    elif figure == 6:
+
+        raw_values = [1, 2, 3, 4, 5, 6, 7]
+        diff_values = [-3, -2, -1, -0.001, 0.001, 1, 2, 3]
+        
+        raw_colors = ['#ffffcc','#c7e9b4','#7fcdbb','#41b6c4','#1d91c0','#225ea8']
+        diff_colors = ['#bf812d','#dfc27d','#f6e8c3','#f5f5f5','#c7eae5','#80cdc1','#35978f']
+        
+        raw_over = '#0c2c84'
+        diff_over = '#01665e'
+        
+        raw_under = 'grey'
+        diff_under = '#8c510a'
+
+    elif figure == 7:
+
+        raw_values = [1, 100, 200, 300, 400, 500, 600]
+        diff_values = [-250, -150, -50, -1, 1, 50, 150, 250]
+        
+        raw_colors = ['#ffffcc','#c7e9b4','#7fcdbb','#41b6c4','#1d91c0','#225ea8']
+        diff_colors = ['#bf812d','#dfc27d','#f6e8c3','#f5f5f5','#c7eae5','#80cdc1','#35978f']
+        
+        raw_over = '#0c2c84'
+        diff_over = '#01665e'
+        
+        raw_under = 'grey'
+        diff_under = '#8c510a'
+
+    elif figure == 8:
+
+        raw_values = [1, 25, 50, 100, 150, 200, 250]
+        diff_values = [-150, -100, -50, -1, 1, 50, 100, 150]
+        
+        raw_colors = ['#ffffcc','#c7e9b4','#7fcdbb','#41b6c4','#1d91c0','#225ea8']
+        diff_colors = ['#bf812d','#dfc27d','#f6e8c3','#f5f5f5','#c7eae5','#80cdc1','#35978f']
+        
+        raw_over = '#0c2c84'
+        diff_over = '#01665e'
+        
+        raw_under = 'grey'
+        diff_under = '#8c510a'
+
+    elif figure == 11:
+
+        raw_values = [1, 3, 5, 7, 9, 11, 13]
+        diff_values = [-4, -3, -2, -1, 1, 2, 3, 4]
+        
+        raw_colors = ['#ffffcc','#c7e9b4','#7fcdbb','#41b6c4','#1d91c0','#225ea8']
+        diff_colors = ['#bf812d','#dfc27d','#f6e8c3','#f5f5f5','#c7eae5','#80cdc1','#35978f']
+        
+        raw_over = '#0c2c84'
+        diff_over = '#01665e'
+        
+        raw_under = 'grey'
+        diff_under = '#8c510a'
+
+    elif figure == 'S5':
+
+        raw_values = [1, 25, 50, 100, 150, 200, 250]
+        diff_values = [-100, -50, -25, -10, 10, 25, 50, 100]
+        
+        raw_colors = ['#ffffcc','#c7e9b4','#7fcdbb','#41b6c4','#1d91c0','#225ea8']
+        diff_colors = ['#bf812d','#dfc27d','#f6e8c3','#f5f5f5','#c7eae5','#80cdc1','#35978f']
+        
+        raw_over = '#0c2c84'
+        diff_over = '#01665e'
+        
+        raw_under = 'grey'
+        diff_under = '#8c510a'
+
+    elif figure == 'S6':
+
+        raw_values = [1, 3, 6, 9, 12, 15, 18]
+        diff_values = [-7, -5, -3, -1, 1, 3, 5, 7]
+        
+        raw_colors = ['#ffffcc','#c7e9b4','#7fcdbb','#41b6c4','#1d91c0','#225ea8']
+        diff_colors = ['#bf812d','#dfc27d','#f6e8c3','#f5f5f5','#c7eae5','#80cdc1','#35978f']
+        
+        raw_over = '#0c2c84'
+        diff_over = '#01665e'
+        
+        raw_under = 'grey'
+        diff_under = '#8c510a'
+
+    else:
+        raise ValueError("Colormap not defined", figure)
         
     cmap = colors.ListedColormap(raw_colors)
     cmap.set_over(raw_over)
